@@ -1,0 +1,132 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f6;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width : 1200px) {
+    .container {
+        width: 1190px;
+    }
+}
+
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+.calculator {
+    border: 1px solid #bcbdc0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 30px rgb(0, 0, 0, 0.1);
+    width: 420px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+
+.display {
+    width: 100%;
+    padding: 18px;
+    font-size: 26px;
+    margin-bottom: 25px;
+    text-align: right;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(to right, #f7f7f7, #f0f0f0);
+    color: #444;
+    pointer-events: none;
+}
+
+.display:focus {
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 15px;
+}
+
+.buttons button {
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #c7c9cc;
+    background-color: #eee;
+    color: #555;
+    cursor: pointer;
+    transition: background .3s, transform .1s, color .3s, box-shadow .2s;
+    -webkit-transition: background .3s, transform .1s, color .3s, box-shadow .2s;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 0.05);
+}
+
+@media (max-width :411px) {
+    .buttons {
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    }
+    .buttons button {
+        padding: 9px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width : 370px) {
+    .buttons {
+        grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+        gap: 12px;
+    }
+    .buttons button {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width:330px) {
+    .buttons {
+        gap: 10px;
+    }
+}
+
+.buttons button:hover {
+    background-color: #d9d9d9;
+    color: #333;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09);
+}
+
+.buttons button:active {
+    transform: scale(0.98);
+    -webkit-transform: scale(0.98);
+    background-color: #bfbfbf;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.06);
+}
+
+/* 
+.buttons button:last-child {
+    grid-column: span 2;
+} */
